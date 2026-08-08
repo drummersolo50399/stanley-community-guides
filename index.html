@@ -13,21 +13,12 @@
   .hero h1 { margin:16px 0 8px; font-size:28px; }
   .hero p { font-size:14.5px; color:#c3cde3; margin:0; }
   main { max-width:640px; margin:0 auto; padding:30px 20px 60px; }
-  .search-wrap { margin-bottom: 20px; }
-  .search-box {
-    width: 100%; padding: 14px 18px; border-radius: 12px; border: 1px solid #eee5d0;
-    font-size: 15px; box-shadow: 0 1px 4px rgba(0,0,0,0.07); box-sizing: border-box;
-    background: #fff; color: #2b2b2b; font-family: inherit;
-  }
-  .search-box:focus { outline: none; border-color: #c9a84c; }
-  .search-count { font-size: 12.5px; color: #999; margin: 8px 4px 0; }
   .card { display:block; text-decoration:none; color:inherit; background:#fff; border-radius:14px; padding:20px 22px; margin-bottom:16px; box-shadow:0 1px 4px rgba(0,0,0,0.07); border:1px solid #eee5d0; transition:box-shadow .15s; }
   .card:hover { box-shadow:0 4px 14px rgba(0,0,0,0.1); }
   .card .name { font-size:19px; font-weight:700; color:#16294d; }
   .card .district { font-size:13px; color:#b8973a; font-weight:600; margin-top:3px; letter-spacing:1px; }
   .card .highlight { font-size:13.5px; color:#666; margin-top:8px; }
   .card .arrow { float:right; color:#c9a84c; font-size:18px; }
-  .no-result { text-align:center; color:#999; font-size:14px; padding:36px 0; display:none; }
   footer { text-align:center; padding:10px 20px 40px; font-size:12px; color:#999; }
 </style>
 </head>
@@ -35,60 +26,28 @@
 <div class="hero">
   <div class="tag">PROPERTY GUIDE</div>
   <h1>社區介紹一覽</h1>
-  <p>由 中信房屋 鍾思俞 為您整理的桃園建案社區資料</p>
+  <p>由 Stanley 為您整理的桃園建案社區資料</p>
 </div>
 <main>
-  <div class="search-wrap">
-    <input type="text" id="searchBox" class="search-box" placeholder="搜尋建案名稱、行政區、關鍵字..." autocomplete="off">
-    <div class="search-count" id="searchCount"></div>
-  </div>
-
-  <div id="cardList">
-    <a class="card" href="/yaxin-xilaideng/" data-search="亞昕喜徠登 桃園市中壢區 A18高鐵桃園站前250公尺 雙鐵共構第一排 飯店式管理酒店公寓">
-      <span class="arrow">›</span>
-      <div class="name">亞昕喜徠登</div>
-      <div class="district">桃園市中壢區</div>
-      <div class="highlight">A18高鐵桃園站前250公尺，雙鐵共構第一排，飯店式管理酒店公寓</div>
-    </a>
-    <a class="card" href="/hongpu-guangnian-shijieguan/" data-search="宏普光年世界館 桃園市中壢區 近A19桃園體育園區站步行約2分鐘 緊鄰環球購物中心 屋齡約10年成熟社區">
-      <span class="arrow">›</span>
-      <div class="name">宏普光年世界館</div>
-      <div class="district">桃園市中壢區</div>
-      <div class="highlight">近A19桃園體育園區站步行約2分鐘，緊鄰環球購物中心，屋齡約10年成熟社區</div>
-    </a>
-  </div>
-
-  <div class="no-result" id="noResult">找不到符合的社區，換個關鍵字試試</div>
+  <a class="card" href="/yaxin-xilaideng/">
+    <span class="arrow">›</span>
+    <div class="name">亞昕喜徠登</div>
+    <div class="district">桃園市中壢區</div>
+    <div class="highlight">A18高鐵桃園站前250公尺，雙鐵共構第一排，飯店式管理酒店公寓</div>
+  </a>
+  <a class="card" href="/hongpu-guangnian-shijieguan/">
+    <span class="arrow">›</span>
+    <div class="name">宏普光年世界館</div>
+    <div class="district">桃園市中壢區</div>
+    <div class="highlight">近A19桃園體育園區站步行約2分鐘，緊鄰環球購物中心，屋齡約10年成熟社區</div>
+  </a>
+  <a class="card" href="/runlong-guojia-dayuan/">
+    <span class="arrow">›</span>
+    <div class="name">潤隆國家大院</div>
+    <div class="district">桃園市中壢區</div>
+    <div class="highlight">A18高鐵桃園站前500公尺，三面臨路2,699坪大基地，雙語學區＋華泰名品城生活圈</div>
+  </a>
 </main>
 <footer>資料僅供參考，實際格局／坪數／價格請以現場帶看與正式契約為準。</footer>
-
-<script>
-(function () {
-  var input = document.getElementById('searchBox');
-  var cards = Array.prototype.slice.call(document.querySelectorAll('.card'));
-  var noResult = document.getElementById('noResult');
-  var countEl = document.getElementById('searchCount');
-  var total = cards.length;
-
-  function normalize(s) { return (s || '').toLowerCase(); }
-
-  function runFilter() {
-    var q = normalize(input.value.trim());
-    var visible = 0;
-    cards.forEach(function (card) {
-      var haystack = normalize(card.getAttribute('data-search') || card.textContent);
-      var match = q === '' || haystack.indexOf(q) !== -1;
-      card.style.display = match ? '' : 'none';
-      if (match) visible++;
-    });
-    noResult.style.display = visible === 0 ? 'block' : 'none';
-    countEl.textContent = q === '' ? '共 ' + total + ' 個社區' : '符合 ' + visible + ' / ' + total + ' 個社區';
-  }
-
-  input.addEventListener('input', runFilter);
-  runFilter();
-})();
-</script>
-
 </body>
 </html>
