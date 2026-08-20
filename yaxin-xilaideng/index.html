@@ -7,66 +7,50 @@
 <style>
   :root { color-scheme: light; }
   * { box-sizing: border-box; }
-  body {
-    margin: 0; padding: 0;
-    font-family: -apple-system, BlinkMacSystemFont, "PingFang TC", "Microsoft JhengHei", sans-serif;
-    background: #faf9f7; color: #2b2b2b; line-height: 1.75;
-  }
-  .hero {
-    background: linear-gradient(160deg, #16294d 0%, #1d3868 55%, #24447e 100%);
-    color: #fff; padding: 56px 24px 46px; text-align: center;
-  }
-  .hero .tag { font-size: 12.5px; letter-spacing: 4px; color: #c9a84c; font-weight: 700; }
-  .hero h1 { margin: 16px 0 10px; font-size: 32px; letter-spacing: .5px; }
-  .hero .addr { font-size: 15px; color: #c3cde3; }
-  .hero .divider { width: 56px; height: 3px; background: #c9a84c; margin: 20px auto; border-radius: 2px; }
-  .hero .highlight {
-    display: inline-block; background: rgba(255,255,255,0.12); border: 1px solid rgba(255,255,255,0.2);
-    padding: 10px 20px; border-radius: 24px; font-size: 13.5px; max-width: 90%;
-  }
-  main { max-width: 720px; margin: 0 auto; padding: 40px 22px 20px; }
-  .back { display:inline-block; margin-bottom: 22px; font-size: 13.5px; color: #16294d; text-decoration: none; }
-  .section { margin-bottom: 38px; }
-  .section-head { border-bottom: 3px solid #16294d; padding-bottom: 10px; margin-bottom: 18px; }
-  .section-head .kicker { font-size: 12px; color: #b8973a; font-weight: 700; letter-spacing: 3px; }
-  .section-head h2 { margin: 4px 0 0; font-size: 21px; color: #16294d; }
-  ul.plain { margin: 0; padding-left: 22px; }
-  ul.plain li { margin-bottom: 9px; font-size: 15px; }
-  table.info { width: 100%; border-collapse: collapse; font-size: 14.5px; }
-  table.info tr:nth-child(odd) { background: #f3f0ea; }
-  table.info th, table.info td { text-align: left; padding: 11px 12px; vertical-align: top; }
-  table.info th { color: #7a7a7a; font-weight: 500; width: 110px; white-space: nowrap; }
-  .badge-row { display: flex; gap: 14px; margin-bottom: 16px; flex-wrap: wrap; }
-  .badge { flex: 1; min-width: 200px; border-radius: 12px; padding: 20px 18px; text-align: center; }
-  .badge.dark { background: #16294d; }
-  .badge.light { background: #f3f0ea; }
-  .badge .num { font-size: 24px; font-weight: 700; }
-  .badge.dark .num { color: #c9a84c; }
-  .badge.light .num { color: #16294d; }
-  .badge .lab { font-size: 12.5px; margin-top: 4px; }
-  .badge.dark .lab { color: #cfd6e6; }
-  .badge.light .lab { color: #7a7a7a; }
-  .note-box {
-    background: #fdf8ea; border: 1px solid #e6d9a8; border-radius: 8px; padding: 14px 16px;
-    font-size: 13px; color: #6b5220; margin-top: 12px;
-  }
-  .highlight-grid { display: flex; flex-direction: column; gap: 10px; }
-  .highlight-item {
-    background: #f3f0ea; border-left: 4px solid #16294d; padding: 13px 16px; border-radius: 6px; font-size: 14.5px;
-  }
-  footer { text-align: center; padding: 30px 22px 46px; border-top: 1px solid #eee5d0; margin-top: 10px; }
-  footer .agent { color: #16294d; font-weight: 700; font-size: 15px; margin-bottom: 6px; }
-  footer .fine { font-size: 12px; color: #999; }
-</style>
+  body { margin:0;padding:0;font-family:-apple-system,BlinkMacSystemFont,"PingFang TC","Microsoft JhengHei",sans-serif;background:#faf9f7;color:#2b2b2b;line-height:1.75; }
+  .hero { background: linear-gradient(160deg, #16294d 0%, #1d3868 55%, #24447e 100%); color:#fff; padding:56px 24px 46px; text-align:center; }
+  .hero .tag { font-size:12.5px; letter-spacing:4px; color:#c9a84c; font-weight:700; }
+  .hero h1 { margin:16px 0 10px; font-size:32px; letter-spacing:.5px; }
+  .hero .addr { font-size:15px; color:#c3cde3; }
+  .hero .divider { width:56px; height:3px; background:#c9a84c; margin:20px auto; border-radius:2px; }
+  .hero .highlight { display:inline-block; background:rgba(255,255,255,0.12); border:1px solid rgba(255,255,255,0.2); padding:10px 20px; border-radius:24px; font-size:13.5px; max-width:90%; }
+  main { max-width:720px; margin:0 auto; padding:40px 22px 20px; }
+  .back { display:inline-block; margin-bottom:22px; font-size:13.5px; color:#16294d; text-decoration:none; }
+  .section { margin-bottom:38px; }
+  .section-head { border-bottom:3px solid #16294d; padding-bottom:10px; margin-bottom:18px; }
+  .section-head .kicker { font-size:12px; color:#b8973a; font-weight:700; letter-spacing:3px; }
+  .section-head h2 { margin:4px 0 0; font-size:21px; color:#16294d; }
+  ul.plain { margin:0; padding-left:22px; }
+  ul.plain li { margin-bottom:9px; font-size:15px; }
+  table.info { width:100%; border-collapse:collapse; font-size:14.5px; }
+  table.info tr:nth-child(odd) { background:#f3f0ea; }
+  table.info th, table.info td { text-align:left; padding:11px 12px; vertical-align:top; }
+  table.info th { color:#7a7a7a; font-weight:500; width:110px; white-space:nowrap; }
+  .badge-row { display:flex; gap:14px; margin-bottom:16px; flex-wrap:wrap; }
+  .badge { flex:1; min-width:200px; border-radius:12px; padding:20px 18px; text-align:center; }
+  .badge.dark { background:#16294d; }
+  .badge.light { background:#f3f0ea; }
+  .badge .num { font-size:24px; font-weight:700; }
+  .badge.dark .num { color:#c9a84c; }
+  .badge.light .num { color:#16294d; }
+  .badge .lab { font-size:12.5px; margin-top:4px; }
+  .badge.dark .lab { color:#cfd6e6; }
+  .badge.light .lab { color:#7a7a7a; }
+  .note-box { background:#fdf8ea; border:1px solid #e6d9a8; border-radius:8px; padding:14px 16px; font-size:13px; color:#6b5220; margin-top:12px; }
+  .highlight-grid { display:flex; flex-direction:column; gap:10px; }
+  .highlight-item { background:#f3f0ea; border-left:4px solid #16294d; padding:13px 16px; border-radius:6px; font-size:14.5px; }
+  footer { text-align:center; padding:30px 22px 46px; border-top:1px solid #eee5d0; margin-top:10px; }
+  footer .agent { color:#16294d; font-weight:700; font-size:15px; margin-bottom:6px; }
+  footer .fine { font-size:12px; color:#999; }</style>
 </head>
 <body>
 
 <div class="hero">
   <div class="tag">社　區　介　紹　·　COMMUNITY GUIDE</div>
   <h1>亞昕喜徠登</h1>
-  <div class="addr">桃園市中壢區高鐵北路一段、青心路口</div>
+  <div class="addr">桃園市中壢區高鐵北路一段、青心路口（第二種商業區）</div>
   <div class="divider"></div>
-  <div class="highlight">A18高鐵桃園站前250公尺　｜　雙鐵共構第一排　｜　飯店式管理酒店公寓</div>
+  <div class="highlight">A18高鐵桃園站前250公尺，雙鐵共構第一排，飯店式管理酒店公寓</div>
 </div>
 
 <main>
@@ -74,96 +58,50 @@
 
   <div class="section">
     <div class="section-head"><div class="kicker">01　BASIC INFO</div><h2>建案基本資料</h2></div>
-    <table class="info">
-      <tr><th>投資興建</th><td>亞昕國際開發股份有限公司</td></tr>
-      <tr><th>營造公司</th><td>國原營造股份有限公司</td></tr>
-      <tr><th>建築設計</th><td>楊振植建築師事務所</td></tr>
-      <tr><th>建築規劃</th><td>地上17層、地下5層，共A、B、C 3棟；1～3樓為商場（昕境文創廣場），4樓以上為住宅</td></tr>
-      <tr><th>總戶數</th><td>約516～558戶住家＋38戶事務所＋商場</td></tr>
-      <tr><th>格局規劃</th><td>套房約15坪、1+1房約17～27坪、2房約18～29坪、3房約28～37坪、4房約45～48坪</td></tr>
-      <tr><th>完工狀況</th><td>預計2025年第三季度完工交屋，目前為準新屋／新成屋</td></tr>
-      <tr><th>公設比</th><td>約33.8％～34.8％</td></tr>
-      <tr><th>座向</th><td>整體基地朝西北，個別戶別座向不同</td></tr>
-      <tr><th>車位規劃</th><td>561個平面車位，約190～220萬／個</td></tr>
-      <tr><th>管理費</th><td>約90元／坪／月</td></tr>
-      <tr><th>物業管理</th><td>伯克錸物業，飯店式管理（移植福朋喜來登管理經驗），有專屬APP</td></tr>
-    </table>
+    <table class="info"><tr><th>投資興建</th><td>亞昕國際開發股份有限公司</td></tr><tr><th>營造公司</th><td>國原營造股份有限公司（監造：田中純夫）</td></tr><tr><th>建築設計</th><td>楊振植建築師事務所</td></tr><tr><th>建築規劃</th><td>地上17層、地下5層，共A、B、C 3棟；1～3樓為商場（昕境文創廣場），4樓以上為住宅</td></tr><tr><th>總戶數</th><td>約516～558戶住家＋38戶事務所＋商場</td></tr><tr><th>格局規劃</th><td>套房約15坪、1+1房約17～27坪、2房約18～29坪、3房約28～37坪、4房約45～48坪</td></tr><tr><th>完工狀況</th><td>預售起家，預計2025年第三季度完工交屋，目前為準新屋／新成屋</td></tr><tr><th>公設比</th><td>公設比約33.8％～34.8％</td></tr><tr><th>座向</th><td>整體基地朝西北，個別戶別座向不同</td></tr><tr><th>車位規劃</th><td>561個平面車位，車位配比約1:1.01，車位價格約190～220萬／個</td></tr><tr><th>管理費</th><td>約90元／坪／月</td></tr><tr><th>物業管理</th><td>伯克錸物業，飯店式管理（移植福朋喜來登經驗），有專屬APP</td></tr></table>
   </div>
 
   <div class="section">
     <div class="section-head"><div class="kicker">02　LOCATION</div><h2>地理位置與交通</h2></div>
-    <ul class="plain">
-      <li>距桃園高鐵站／機場捷運A18站約250～500公尺，步行約5分鐘內，雙鐵共構第一排</li>
-      <li>基地正對高鐵站前約7,000坪永久綠地，享永久棟距與開闊視野</li>
-      <li>步行約100公尺達IKEA旗艦店，約400公尺達華泰名品城</li>
-      <li>車行約10分鐘上國道1號／國道2號，機場捷運約20分鐘直達桃園國際機場</li>
-      <li>高鐵約10分鐘可達新竹</li>
-    </ul>
+    <ul class="plain"><li>距桃園高鐵站／機場捷運A18站約250～500公尺，步行約5分鐘內，雙鐵共構第一排</li><li>基地西北側正對高鐵站前約7,000坪永久綠地，享永久棟距</li><li>步行約100公尺達IKEA旗艦店，約400公尺達華泰名品城</li><li>車行約10分鐘上國道1號／國道2號，機場捷運約20分鐘直達桃園機場</li><li>高鐵約10分鐘可達新竹</li></ul>
   </div>
 
   <div class="section">
     <div class="section-head"><div class="kicker">03　LIFESTYLE</div><h2>生活機能</h2></div>
-    <ul class="plain">
-      <li>社區自帶「昕境文創廣場」商場（1～3樓），下樓即有生活與美食店家</li>
-      <li>鄰近華泰名品城、大江購物中心、A19環球購物中心（內有家樂福、影城）</li>
-      <li>全聯於A18、A19生活圈各有一間，另有大全聯量販店與IKEA共構</li>
-      <li>橫山書法藝術公園、青塘園、桃園國際棒球場、Xpark水族館、新光影城、和逸飯店等，生活娛樂機能豐富</li>
-      <li>生活採購以周邊超市／賣場與購物中心為主</li>
-    </ul>
+    <ul class="plain"><li>社區自帶昕境文創廣場（1～3樓）</li><li>華泰名品城</li><li>大江購物中心</li><li>A19環球購物中心（內有家樂福、影城）</li><li>全聯（A18、A19生活圈各一間）</li><li>大全聯量販店（與IKEA共構）</li><li>傳統市場需前往中壢市區新明市場、青果市場或大竹黃昏市場，車程約10～15分鐘</li><li>醫療以診所為主（如領航南路一段青埔診所），大型醫院需前往中壢市區，車程約15～20分鐘</li><li>橫山書法藝術公園（約1公里）</li><li>青塘園</li><li>桃園國際棒球場</li><li>Xpark水族館</li><li>新光影城</li><li>和逸飯店</li></ul>
   </div>
 
   <div class="section">
     <div class="section-head"><div class="kicker">04　SCHOOL DISTRICT</div><h2>鄰近學區</h2></div>
-    <table class="info">
-      <tr><th>國小</th><td>青園國小（雙語／三語教學），步行約350公尺</td></tr>
-      <tr><th>國小（備選）</th><td>青埔國小（雙語教學），車程約3公里</td></tr>
-      <tr><th>國中</th><td>大園國中／青埔國中，車程約2.5～3公里</td></tr>
-      <tr><th>高中</th><td>大園國際高中（公立雙語特色高中，IBDP國際文憑專班）</td></tr>
-    </table>
+    <table class="info"><tr><th>國小</th><td>青園國小（雙語／三語教學，附設幼兒園），步行約350公尺</td></tr><tr><th>國小（備選）</th><td>青埔國小（雙語教學），車程約3公里／6～8分鐘</td></tr><tr><th>國中</th><td>大園國中／青埔國中（來源不一），約2.5～3公里／5～7分鐘車程</td></tr><tr><th>高中</th><td>大園國際高中（公立雙語特色高中），車程約10分鐘內</td></tr></table>
   </div>
 
   <div class="section">
     <div class="section-head"><div class="kicker">05　DAYLIGHT</div><h2>採光與環境</h2></div>
-    <ul class="plain">
-      <li>整體基地座向規劃朝西北，各棟戶別座向不同</li>
-      <li>面高鐵站前（西北側）戶別享永久棟距與綠地景觀</li>
-      <li>1+1房主力戶型多配置於東南側或北側，理論上西曬較輕，實際仍建議依購買戶別現場確認採光方向</li>
-    </ul>
+    <ul class="plain"><li>整體基地座向規劃朝西北，各棟戶別座向不同</li><li>面高鐵站前（西北側）3房／4房戶別享永久棟距景觀，但西北向易有午後日照</li><li>1+1房主力戶型多配置於東南側或北側／天井，理論上西曬較輕，但在售物件中亦有西／西南／西北向的1+1房</li></ul>
   </div>
 
   <div class="section">
     <div class="section-head"><div class="kicker">06　FACILITIES</div><h2>公共設施</h2></div>
-    <ul class="plain">
-      <li>2樓：峇里島風格戶外游泳池</li>
-      <li>4樓：接待大廳、中庭花園、空中花園、交誼廳、會議室、閱覽室、健身房、親子遊戲區、兒童遊戲室、KTV、瑜伽教室、廚藝教室、Lounge Bar、信箱區</li>
-      <li>飯店式物業管理，含水電報修、代管服務、餐飲提供、郵件收發等服務</li>
-    </ul>
+    <ul class="plain"><li>2樓：峇里島風格戶外游泳池</li><li>4樓：接待大廳、中庭花園、空中花園、交誼廳、會議室、閱覽室、健身房、親子遊戲區、兒童遊戲室、KTV、瑜伽教室、廚藝教室、Lounge Bar、信箱區</li><li>飯店式物業管理，含水電報修、代管、餐飲、郵件收發等服務</li></ul>
   </div>
 
   <div class="section">
     <div class="section-head"><div class="kicker">07　MARKET PRICE</div><h2>近期實價登錄行情</h2></div>
+    
     <div class="badge-row">
-      <div class="badge dark"><div class="num">約 53.7 萬／坪</div><div class="lab">近一年成交均價</div></div>
-      <div class="badge light"><div class="num">555+ 筆</div><div class="lab">歷史累積實際成交紀錄</div></div>
+      <div class="badge dark"><div class="num">約53.7萬／坪</div><div class="lab">近一年成交均價</div></div>
+      
     </div>
-    <ul class="plain">
-      <li>目前在售1＋1房約21～33坪，開價區間約1,268萬～1,698萬，單價約51.8～55.5萬／坪</li>
-      <li>區域（青埔A18高鐵生活圈）近一年均價約54萬／坪，房價持續上漲</li>
-    </ul>
+    <ul class="plain"><li>目前在售1＋1房（591在售），約21坪，約999萬（含車位），單價約47.4萬／坪</li><li>目前在售1房2廳（2改1房），約40坪，約2,112萬，單價約52.8萬／坪</li><li>目前在售1房＋平車（全新交屋），未詳，未詳，單價約51.8萬／坪</li><li>目前在售1房2廳（591社區頁區間統計），23～33坪，1,188～1,698萬，單價約52.8～58.7萬／坪</li><li>區域近一年均價 約54萬／坪（青埔A18高鐵生活圈，近一年）</li></ul>
     <div class="note-box">以上為公開實價登錄資料彙整，僅供參考，實際報價請與您的房屋顧問確認最新狀況。</div>
+  
   </div>
 
   <div class="section">
     <div class="section-head"><div class="kicker">08　HIGHLIGHTS</div><h2>推薦重點</h2></div>
-    <div class="highlight-grid">
-      <div class="highlight-item">雙鐵（高鐵＋機捷A18）共構第一排，步行5分鐘內，交通機能全台稀有</div>
-      <div class="highlight-item">基地正對高鐵站前永久綠地，享永久棟距，未來站前商務區完成後更具增值潛力</div>
-      <div class="highlight-item">飯店式物業管理，公設完整，適合自住與置產出租</div>
-      <div class="highlight-item">鄰近IKEA、華泰名品城、Xpark等指標商場與娛樂設施</div>
-      <div class="highlight-item">新成屋／準新屋，屋況與公設嶄新</div>
-    </div>
+    <div class="highlight-grid"><div class="highlight-item">雙鐵（高鐵＋機捷A18）共構第一排，步行5分鐘內，交通機能全台稀有</div><div class="highlight-item">基地正對高鐵站前永久綠地，享永久棟距，未來站前商務區完成後更具增值潛力</div><div class="highlight-item">飯店式物業管理，公設完整，適合自住與置產出租</div><div class="highlight-item">鄰近IKEA、華泰名品城、Xpark等指標商場娛樂設施</div><div class="highlight-item">建築工法與結構用料規格較高</div></div>
   </div>
-
 </main>
 
 <footer>

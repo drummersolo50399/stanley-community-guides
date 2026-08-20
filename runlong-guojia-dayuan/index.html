@@ -7,57 +7,41 @@
 <style>
   :root { color-scheme: light; }
   * { box-sizing: border-box; }
-  body {
-    margin: 0; padding: 0;
-    font-family: -apple-system, BlinkMacSystemFont, "PingFang TC", "Microsoft JhengHei", sans-serif;
-    background: #faf9f7; color: #2b2b2b; line-height: 1.75;
-  }
-  .hero {
-    background: linear-gradient(160deg, #16294d 0%, #1d3868 55%, #24447e 100%);
-    color: #fff; padding: 56px 24px 46px; text-align: center;
-  }
-  .hero .tag { font-size: 12.5px; letter-spacing: 4px; color: #c9a84c; font-weight: 700; }
-  .hero h1 { margin: 16px 0 10px; font-size: 32px; letter-spacing: .5px; }
-  .hero .addr { font-size: 15px; color: #c3cde3; }
-  .hero .divider { width: 56px; height: 3px; background: #c9a84c; margin: 20px auto; border-radius: 2px; }
-  .hero .highlight {
-    display: inline-block; background: rgba(255,255,255,0.12); border: 1px solid rgba(255,255,255,0.2);
-    padding: 10px 20px; border-radius: 24px; font-size: 13.5px; max-width: 90%;
-  }
-  main { max-width: 720px; margin: 0 auto; padding: 40px 22px 20px; }
-  .back { display:inline-block; margin-bottom: 22px; font-size: 13.5px; color: #16294d; text-decoration: none; }
-  .section { margin-bottom: 38px; }
-  .section-head { border-bottom: 3px solid #16294d; padding-bottom: 10px; margin-bottom: 18px; }
-  .section-head .kicker { font-size: 12px; color: #b8973a; font-weight: 700; letter-spacing: 3px; }
-  .section-head h2 { margin: 4px 0 0; font-size: 21px; color: #16294d; }
-  ul.plain { margin: 0; padding-left: 22px; }
-  ul.plain li { margin-bottom: 9px; font-size: 15px; }
-  table.info { width: 100%; border-collapse: collapse; font-size: 14.5px; }
-  table.info tr:nth-child(odd) { background: #f3f0ea; }
-  table.info th, table.info td { text-align: left; padding: 11px 12px; vertical-align: top; }
-  table.info th { color: #7a7a7a; font-weight: 500; width: 110px; white-space: nowrap; }
-  .badge-row { display: flex; gap: 14px; margin-bottom: 16px; flex-wrap: wrap; }
-  .badge { flex: 1; min-width: 200px; border-radius: 12px; padding: 20px 18px; text-align: center; }
-  .badge.dark { background: #16294d; }
-  .badge.light { background: #f3f0ea; }
-  .badge .num { font-size: 24px; font-weight: 700; }
-  .badge.dark .num { color: #c9a84c; }
-  .badge.light .num { color: #16294d; }
-  .badge .lab { font-size: 12.5px; margin-top: 4px; }
-  .badge.dark .lab { color: #cfd6e6; }
-  .badge.light .lab { color: #7a7a7a; }
-  .note-box {
-    background: #fdf8ea; border: 1px solid #e6d9a8; border-radius: 8px; padding: 14px 16px;
-    font-size: 13px; color: #6b5220; margin-top: 12px;
-  }
-  .highlight-grid { display: flex; flex-direction: column; gap: 10px; }
-  .highlight-item {
-    background: #f3f0ea; border-left: 4px solid #16294d; padding: 13px 16px; border-radius: 6px; font-size: 14.5px;
-  }
-  footer { text-align: center; padding: 30px 22px 46px; border-top: 1px solid #eee5d0; margin-top: 10px; }
-  footer .agent { color: #16294d; font-weight: 700; font-size: 15px; margin-bottom: 6px; }
-  footer .fine { font-size: 12px; color: #999; }
-</style>
+  body { margin:0;padding:0;font-family:-apple-system,BlinkMacSystemFont,"PingFang TC","Microsoft JhengHei",sans-serif;background:#faf9f7;color:#2b2b2b;line-height:1.75; }
+  .hero { background: linear-gradient(160deg, #16294d 0%, #1d3868 55%, #24447e 100%); color:#fff; padding:56px 24px 46px; text-align:center; }
+  .hero .tag { font-size:12.5px; letter-spacing:4px; color:#c9a84c; font-weight:700; }
+  .hero h1 { margin:16px 0 10px; font-size:32px; letter-spacing:.5px; }
+  .hero .addr { font-size:15px; color:#c3cde3; }
+  .hero .divider { width:56px; height:3px; background:#c9a84c; margin:20px auto; border-radius:2px; }
+  .hero .highlight { display:inline-block; background:rgba(255,255,255,0.12); border:1px solid rgba(255,255,255,0.2); padding:10px 20px; border-radius:24px; font-size:13.5px; max-width:90%; }
+  main { max-width:720px; margin:0 auto; padding:40px 22px 20px; }
+  .back { display:inline-block; margin-bottom:22px; font-size:13.5px; color:#16294d; text-decoration:none; }
+  .section { margin-bottom:38px; }
+  .section-head { border-bottom:3px solid #16294d; padding-bottom:10px; margin-bottom:18px; }
+  .section-head .kicker { font-size:12px; color:#b8973a; font-weight:700; letter-spacing:3px; }
+  .section-head h2 { margin:4px 0 0; font-size:21px; color:#16294d; }
+  ul.plain { margin:0; padding-left:22px; }
+  ul.plain li { margin-bottom:9px; font-size:15px; }
+  table.info { width:100%; border-collapse:collapse; font-size:14.5px; }
+  table.info tr:nth-child(odd) { background:#f3f0ea; }
+  table.info th, table.info td { text-align:left; padding:11px 12px; vertical-align:top; }
+  table.info th { color:#7a7a7a; font-weight:500; width:110px; white-space:nowrap; }
+  .badge-row { display:flex; gap:14px; margin-bottom:16px; flex-wrap:wrap; }
+  .badge { flex:1; min-width:200px; border-radius:12px; padding:20px 18px; text-align:center; }
+  .badge.dark { background:#16294d; }
+  .badge.light { background:#f3f0ea; }
+  .badge .num { font-size:24px; font-weight:700; }
+  .badge.dark .num { color:#c9a84c; }
+  .badge.light .num { color:#16294d; }
+  .badge .lab { font-size:12.5px; margin-top:4px; }
+  .badge.dark .lab { color:#cfd6e6; }
+  .badge.light .lab { color:#7a7a7a; }
+  .note-box { background:#fdf8ea; border:1px solid #e6d9a8; border-radius:8px; padding:14px 16px; font-size:13px; color:#6b5220; margin-top:12px; }
+  .highlight-grid { display:flex; flex-direction:column; gap:10px; }
+  .highlight-item { background:#f3f0ea; border-left:4px solid #16294d; padding:13px 16px; border-radius:6px; font-size:14.5px; }
+  footer { text-align:center; padding:30px 22px 46px; border-top:1px solid #eee5d0; margin-top:10px; }
+  footer .agent { color:#16294d; font-weight:700; font-size:15px; margin-bottom:6px; }
+  footer .fine { font-size:12px; color:#999; }</style>
 </head>
 <body>
 
@@ -66,7 +50,7 @@
   <h1>潤隆國家大院</h1>
   <div class="addr">桃園市中壢區高鐵北路一段、青昇路口</div>
   <div class="divider"></div>
-  <div class="highlight">A18高鐵桃園站前500公尺　｜　三面臨路2,699坪大基地　｜　雙語學區＋華泰名品城生活圈</div>
+  <div class="highlight">興富發集團旗下潤隆建設｜A18高鐵桃園站前500公尺，三面臨路2,699坪大基地，雙語學區＋華泰名品城生活圈</div>
 </div>
 
 <main>
@@ -74,100 +58,55 @@
 
   <div class="section">
     <div class="section-head"><div class="kicker">01　BASIC INFO</div><h2>建案基本資料</h2></div>
-    <table class="info">
-      <tr><th>投資興建</th><td>潤隆建設股份有限公司（興富發集團旗下）</td></tr>
-      <tr><th>營造公司</th><td>金駿營造股份有限公司</td></tr>
-      <tr><th>建築設計</th><td>王銘鴻建築師事務所（公設設計：英國G.A Group）</td></tr>
-      <tr><th>建築規劃</th><td>地上15、16、17層、地下5層，共A、B、C 3棟</td></tr>
-      <tr><th>總戶數</th><td>802戶住家＋24戶店面，共826戶</td></tr>
-      <tr><th>格局規劃</th><td>二房（22、26坪）／三房（35坪）／店面（21～68坪）</td></tr>
-      <tr><th>完工狀況</th><td>已交屋，屋齡約3年，成熟社區</td></tr>
-      <tr><th>公設比</th><td>約34%</td></tr>
-      <tr><th>座向</th><td>整體規劃朝西北、西南、東北、東南</td></tr>
-      <tr><th>車位規劃</th><td>平面式車位894個，車位配比約1:1.08</td></tr>
-      <tr><th>管理費</th><td>約70元／坪／月</td></tr>
-      <tr><th>物業管理</th><td>已成立管委會，全天候警衛管理，垃圾社區統一冷藏處理</td></tr>
-    </table>
+    <table class="info"><tr><th>投資興建</th><td>潤隆建設股份有限公司（興富發集團旗下）</td></tr><tr><th>營造公司</th><td>金駿營造股份有限公司</td></tr><tr><th>建築設計</th><td>王銘鴻建築師事務所（景觀設計：老圃造園；公設設計：英國G.A Group；燈光設計：厚德正庫；企劃銷售：海悅廣告）</td></tr><tr><th>建築規劃</th><td>1幢3棟（A/B/C棟），地上15、16、17層、地下5層</td></tr><tr><th>總戶數</th><td>802戶住家＋24戶店面＝826戶</td></tr><tr><th>格局規劃</th><td>二房（22、26坪）／三房（35坪）／店面（21～68坪）</td></tr><tr><th>完工狀況</th><td>使用執照112年核發（約2023年），屋齡約3年，已交屋成熟社區</td></tr><tr><th>公設比</th><td>公設比約34%</td></tr><tr><th>座向</th><td>整體規劃朝西北、西南、東北、東南（無正南北棟）</td></tr><tr><th>車位規劃</th><td>平面式車位894個，車位配比約1:1.08，坡道平面式，B2大車位約200萬起、往下樓層遞減</td></tr><tr><th>管理費</th><td>約70元／坪／月</td></tr><tr><th>物業管理</th><td>已成立管委會，全天候警衛管理，垃圾社區統一處理（地下室專區堆置，有冷藏設備）</td></tr></table>
   </div>
 
   <div class="section">
     <div class="section-head"><div class="kicker">02　LOCATION</div><h2>地理位置與交通</h2></div>
-    <ul class="plain">
-      <li>距機捷A18桃園高鐵站／高鐵桃園站約500～570公尺，步行約5～7分鐘</li>
-      <li>鄰近國道1號、2號，車行約5分鐘可上機場系統交流道</li>
-      <li>高鐵約11分鐘到新竹、約19分鐘到台北</li>
-      <li>基地三面臨路，位於2,699坪角地基地上</li>
-    </ul>
+    <ul class="plain"><li>距機捷A18桃園高鐵站／高鐵桃園站約500～570公尺，步行約5～7分鐘</li><li>鄰近國道1號、2號，車行約5分鐘可上機場系統交流道</li><li>高鐵約11分鐘到新竹、約19分鐘到台北</li></ul>
   </div>
 
   <div class="section">
     <div class="section-head"><div class="kicker">03　LIFESTYLE</div><h2>生活機能</h2></div>
-    <ul class="plain">
-      <li>華泰名品城步行約5分鐘、IKEA桃園店步行約3分鐘，購物娛樂機能豐富</li>
-      <li>國泰置地廣場開車約7分鐘</li>
-      <li>全聯福利中心提供日常採購</li>
-      <li>兒二公園（約213公尺）、橫山書法藝術公園（步行約7分鐘）等綠地休憩空間鄰近</li>
-      <li>鄰近桃園市立美術館、流行音樂中心、亞洲矽谷中心等指標建設</li>
-    </ul>
+    <ul class="plain"><li>華泰名品城（步行約5分鐘）</li><li>IKEA桃園店（步行約3分鐘）</li><li>國泰置地廣場（開車約7分鐘）</li><li>全聯福利中心</li><li>直線500公尺內有診所／醫院，大型醫院僅A16清大附屬醫院「規劃中」尚未啟用</li><li>兒二公園（約213公尺）</li><li>橫山書法藝術公園（步行約7分鐘，近3萬坪）</li><li>桃園市立美術館、流行音樂中心、亞洲矽谷中心等鄰近公共建設</li></ul>
   </div>
 
   <div class="section">
     <div class="section-head"><div class="kicker">04　SCHOOL DISTRICT</div><h2>鄰近學區</h2></div>
-    <table class="info">
-      <tr><th>國小</th><td>青園國小（三語教學：中文、英文、程式語言），步行約5分鐘</td></tr>
-      <tr><th>國中</th><td>青埔國中（雙語學區）</td></tr>
-      <tr><th>高中</th><td>大園高中，步行約10分鐘</td></tr>
-    </table>
+    <table class="info"><tr><th>國小</th><td>青園國小，步行約5分鐘</td></tr><tr><th>國中</th><td>青埔國中，查無明確距離資料</td></tr><tr><th>高中</th><td>大園高中，步行約10分鐘</td></tr></table>
   </div>
 
   <div class="section">
     <div class="section-head"><div class="kicker">05　DAYLIGHT</div><h2>採光與環境</h2></div>
-    <ul class="plain">
-      <li>社區整體規劃朝西北、西南、東北、東南四個方位</li>
-      <li>朝西南、朝西北戶型午後日照較充足，建議賞屋時安排下午時段實地感受</li>
-      <li>面高鐵北路的戶別，建議賞屋時實際體驗周邊環境</li>
-    </ul>
-    <div class="note-box">興建期間本案曾因外牆造型梁施工外觀問題受到媒體關注，經桃園市政府建管處確認不影響結構安全後完成交屋，目前已正常使用逾3年。誠信告知，供您參考。</div>
+    <ul class="plain"><li>社區整體無正南北棟，規劃朝西北、西南、東北、東南四個方位</li><li>朝西南、朝西北戶型午後西曬較明顯</li><li>面高鐵北路（西側）之戶別另需留意高鐵行經時的震動與噪音</li></ul>
   </div>
 
   <div class="section">
     <div class="section-head"><div class="kicker">06　FACILITIES</div><h2>公共設施</h2></div>
-    <ul class="plain">
-      <li>接待大廳、中庭花園、空中花園、交誼廳、視聽室</li>
-      <li>游泳池、健身房、廚藝教室</li>
-      <li>信箱區、曬被區等生活機能設施</li>
-    </ul>
+    <ul class="plain"><li>接待大廳、中庭花園、空中花園、交誼廳、視聽室、游泳池、健身房、廚藝教室、信箱區、曬被區</li><li>另有平台列出KTV、圖書室、遊戲室、媽媽教室、會議室等（各平台公設清單略有差異，以現場實際規劃為準）</li></ul>
   </div>
 
   <div class="section">
     <div class="section-head"><div class="kicker">07　MARKET PRICE</div><h2>近期實價登錄行情</h2></div>
+    
     <div class="badge-row">
-      <div class="badge dark"><div class="num">約 49～55 萬／坪</div><div class="lab">近一年成交均價（各平台區間）</div></div>
-      <div class="badge light"><div class="num">56.1 萬／坪</div><div class="lab">最新單月（2026年6月）成交單價</div></div>
+      <div class="badge dark"><div class="num">約44.6～54.6萬／坪</div><div class="lab">近一年成交均價</div></div>
+      
     </div>
-    <ul class="plain">
-      <li>目前在售物件：1房約32坪／2房約20～32坪／3房約37～49坪</li>
-      <li>2房開價區間約1,435～1,888萬，3房開價區間約2,188～2,488萬</li>
-    </ul>
-    <div class="note-box">以上為公開實價登錄資料彙整，各平台統計時間窗不同故數字略有差異，僅供參考，實際報價請與您的房屋顧問確認最新狀況。</div>
+    <ul class="plain"><li>目前在售在售中古屋（591累計），1房32坪／2房20~32坪／3房37~49坪，1房1,598萬／2房1,435~1,888萬／3房2,188~2,488萬，單價約44~65萬／坪（依戶別與樓層落差大）</li></ul>
+    <div class="note-box">以上為公開實價登錄資料彙整，僅供參考，實際報價請與您的房屋顧問確認最新狀況。</div>
+  
   </div>
 
   <div class="section">
     <div class="section-head"><div class="kicker">08　HIGHLIGHTS</div><h2>推薦重點</h2></div>
-    <div class="highlight-grid">
-      <div class="highlight-item">機捷A18／高鐵桃園站站前第一排，步行5～7分鐘，三面臨路大基地</div>
-      <div class="highlight-item">華泰名品城、IKEA步行可達，生活機能強</div>
-      <div class="highlight-item">雙語學區（青園國小三語教學＋青埔國中雙語），步行5分鐘</div>
-      <div class="highlight-item">國際級英國G.A Group公設團隊操刀，公設規格高</div>
-      <div class="highlight-item">屋齡新（約3年），已交屋成熟社區，行情透明度高</div>
-    </div>
+    <div class="highlight-grid"><div class="highlight-item">機捷A18／高鐵桃園站站前第一排，步行5~7分鐘，三面臨路2,699坪大基地</div><div class="highlight-item">華泰名品城、IKEA步行可達，生活機能強</div><div class="highlight-item">雙語學區（青園國小三語教學＋青埔國中雙語），步行5分鐘</div><div class="highlight-item">國際級英國G.A Group公設團隊操刀，公設規格高（游泳池、健身房、社區花園等）</div><div class="highlight-item">屋齡新（約3年），已交屋成熟社區，行情透明度較預售案高</div></div>
   </div>
-
 </main>
 
 <footer>
-  <div class="agent">資料由 中信房屋－鍾思俞 為您整理提供</div>
-  <div class="fine">資料彙整自591實價登錄、樂居、信義房屋等公開資訊，僅供參考，實際格局／坪數／價格請以現場帶看與正式契約為準。</div>
+  <div class="agent">資料由 中信房屋 鍾思俞 為您整理提供</div>
+  <div class="fine">資料彙整自591實價登錄、樂居等公開資訊，僅供參考，實際格局／坪數／價格請以現場帶看與正式契約為準。</div>
   <div class="fine" style="margin-top:4px">更新日期：2026年8月9日</div>
 </footer>
 
