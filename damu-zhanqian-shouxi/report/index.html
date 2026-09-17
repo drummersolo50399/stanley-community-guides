@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>大睦站前首席房價｜實價登錄成交、格局行情與購屋預算</title>
+<meta name="description" content="大睦站前首席（桃園市中壢區）實價登錄 19 筆成交整理：各格局成交單價、今日行情區間、區域走勢、生活機能與購屋預算。">
+<style>
+:root{color-scheme:light;--navy:#16294d;--navy2:#1d3868;--navy3:#24447e;--gold:#c9a84c;--gold2:#b8973a;
+--bg:#f4f2ee;--card:#fff;--ink:#23262d;--sub:#6b7079;--line:#e7e1d4;--soft:#f3f0ea;--up:#b03a2e;--ok:#2f7d4f}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"PingFang TC","Microsoft JhengHei",sans-serif;background:var(--bg);color:var(--ink);line-height:1.65;-webkit-text-size-adjust:100%}
+a{color:inherit}
+.top{background:var(--navy);color:#fff;position:sticky;top:0;z-index:20}
+.top-in{max-width:1180px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:10px 16px}
+.brand{text-decoration:none;font-weight:700;letter-spacing:1px;display:flex;align-items:center;gap:8px}
+.logo{display:inline-grid;place-items:center;width:28px;height:28px;border-radius:7px;background:var(--gold);color:var(--navy);font-size:17px}
+.top-cta{text-decoration:none;background:var(--gold);color:var(--navy);font-weight:700;font-size:14px;padding:7px 14px;border-radius:999px}
+.shell{max-width:1180px;margin:0 auto;display:grid;grid-template-columns:220px 1fr;gap:24px;padding:24px 16px 40px}
+.side{position:sticky;top:72px;align-self:start}
+.tabs{display:flex;flex-direction:column;gap:4px;background:var(--navy);border-radius:14px;padding:10px}
+.tabs button{all:unset;cursor:pointer;display:flex;align-items:center;gap:10px;color:#c3cde3;padding:11px 12px;border-radius:9px;font-size:15px}
+.tabs button i{font-style:normal;width:22px;text-align:center;color:var(--gold)}
+.tabs button:hover{background:rgba(255,255,255,.07);color:#fff}
+.tabs button[aria-selected=true]{background:#fff;color:var(--navy);font-weight:700}
+.tabs button:focus-visible{outline:2px solid var(--gold)}
+.side-agent{margin-top:14px;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px}
+.sa-k{font-size:12px;color:var(--gold2);font-weight:700;letter-spacing:2px}
+.sa-n{font-weight:700;color:var(--navy);margin-top:4px}
+.sa-s{font-size:12.5px;color:var(--sub)}
+.sa-p{display:block;margin-top:8px;text-decoration:none;font-weight:700;color:var(--navy)}
+.main{min-width:0}
+.head h1{margin:4px 0 2px;font-size:28px;color:var(--navy);letter-spacing:.5px}
+.crumb{font-size:13px;color:var(--sub)}.crumb a{text-decoration:none;color:var(--sub)}.crumb a:hover{color:var(--navy)}
+.pill{display:inline-block;vertical-align:middle;font-size:12px;font-weight:600;background:var(--soft);color:var(--gold2);border:1px solid var(--line);padding:2px 9px;border-radius:999px;margin-left:6px}
+.loc{color:var(--sub);font-size:14px;margin-bottom:18px}
+.pane{display:none}.pane.on{display:block}
+.grid2{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,1fr);gap:18px;align-items:start}
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:20px;margin-bottom:18px}
+.card h2{margin:0 0 4px;font-size:18px;color:var(--navy)}
+.card .kick{font-size:11.5px;letter-spacing:2px;color:var(--gold2);font-weight:700}
+.card p.lead{margin:2px 0 14px;color:var(--sub);font-size:13.5px}
+.dark{background:linear-gradient(160deg,var(--navy) 0%,var(--navy2) 60%,var(--navy3) 100%);color:#fff;border:0}
+.dark h2{color:#fff}.dark .muted{color:#b9c4db}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{all:unset;cursor:pointer;border:1px solid var(--line);background:#fff;border-radius:12px;padding:9px 14px;min-width:84px;text-align:center}
+.chip b{display:block;font-size:15px;color:var(--navy)}.chip small{color:var(--sub);font-size:12px}
+.chip[aria-pressed=true]{border-color:var(--gold);background:#fdf8ea;box-shadow:inset 0 0 0 1px var(--gold)}
+.chip:focus-visible{outline:2px solid var(--navy)}
+.toprow{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;padding-bottom:14px;border-bottom:1px solid rgba(255,255,255,.15);margin-bottom:14px}
+.toprow .t{font-size:12.5px;color:#b9c4db}.toprow .v{font-size:20px;font-weight:700;color:var(--gold)}
+.kpis{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.kpi{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);border-radius:12px;padding:14px}
+.kpi .t{font-size:12.5px;color:#b9c4db}
+.kpi .v{font-size:32px;font-weight:800;line-height:1.15;margin-top:4px;font-variant-numeric:tabular-nums}
+.kpi .v small{font-size:13px;font-weight:500;color:#b9c4db;margin-left:4px}
+.kpi .n{font-size:12px;color:#8e9bb8;margin-top:4px}
+.kpi.gold .v{color:var(--gold)}
+.kpi .v.long{font-size:24px;white-space:nowrap}
+.note{font-size:12.5px;color:#8e9bb8;margin-top:12px}
+.lightnote{font-size:12.5px;color:var(--sub);background:var(--soft);border-radius:10px;padding:10px 12px;margin-top:12px}
+.range{margin:8px 0 4px}
+.range .bar{position:relative;height:10px;border-radius:99px;background:linear-gradient(90deg,#dfe6f3,var(--navy3))}
+.range .mk{position:absolute;top:-5px;width:4px;height:20px;background:var(--gold);border-radius:2px;transform:translateX(-2px)}
+.range .lab{display:flex;justify-content:space-between;font-size:13px;color:var(--sub);margin-top:8px;font-variant-numeric:tabular-nums}
+.range .lab b{color:var(--navy);font-size:16px}
+.big{font-size:30px;font-weight:800;color:var(--navy);font-variant-numeric:tabular-nums}
+.big small{font-size:14px;color:var(--sub);font-weight:500}
+table.t{width:100%;border-collapse:collapse;font-size:14px;font-variant-numeric:tabular-nums}
+table.t th{font-weight:600;color:var(--sub);text-align:left;font-size:12.5px;padding:8px 8px;border-bottom:1px solid var(--line);white-space:nowrap}
+table.t td{padding:9px 8px;border-bottom:1px solid #f0ece3}
+table.t td.r,table.t th.r{text-align:right}
+.scroll{overflow-x:auto;-webkit-overflow-scrolling:touch}
+.info{width:100%;border-collapse:collapse;font-size:14.5px}
+.info tr:nth-child(odd){background:var(--soft)}
+.info th,.info td{text-align:left;padding:10px 12px;vertical-align:top}
+.info th{color:var(--sub);font-weight:500;width:110px;white-space:nowrap}
+ul.l{margin:0;padding-left:20px}ul.l li{margin-bottom:7px}
+.sub-h{font-size:14px;font-weight:700;color:var(--navy);margin:14px 0 6px}
+.legend{display:flex;gap:16px;font-size:12.5px;color:var(--sub);margin:6px 0}
+.legend span:before{content:"";display:inline-block;width:14px;height:3px;border-radius:2px;margin-right:6px;vertical-align:middle;background:var(--c)}
+svg.chart{width:100%;height:auto;display:block}
+.btn{display:inline-block;text-decoration:none;background:var(--navy);color:#fff;font-weight:700;padding:11px 18px;border-radius:10px;font-size:14.5px}
+.btn.gold{background:var(--gold);color:var(--navy)}
+.muted{color:var(--sub)}
+.tag-same{font-size:11px;color:var(--gold2);border:1px solid var(--line);border-radius:6px;padding:0 5px;margin-left:4px}
+.qa{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px}
+.qa a{display:block;text-decoration:none;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px 14px;font-size:14px;cursor:pointer}
+.qa a b{display:block;color:var(--navy)}
+.qa a span{font-size:12.5px;color:var(--sub)}
+.foot{background:var(--navy);color:#c3cde3;margin-top:10px}
+.foot-in{max-width:1180px;margin:0 auto;padding:24px 16px 34px;font-size:12.5px}
+.f-agent{color:#fff;font-weight:700;font-size:14px;margin-bottom:4px}
+.f-fine{margin-top:4px;line-height:1.7}
+@media (max-width:900px){
+  .shell{grid-template-columns:minmax(0,1fr);padding-top:0;gap:0}
+  .side,.main{min-width:0}
+  .side{position:sticky;top:48px;z-index:10;margin:0 -16px 14px;background:var(--bg)}
+  .tabs{flex-direction:row;overflow-x:auto;border-radius:0;padding:6px 10px;gap:2px;scrollbar-width:none}
+  .tabs::-webkit-scrollbar{display:none}
+  .tabs button{white-space:nowrap;padding:9px 11px;font-size:14px}
+  .tabs button i{display:none}
+  .side-agent{display:none}
+  .grid2{grid-template-columns:1fr}
+  .head h1{font-size:23px;margin-top:10px}
+  .kpi .v{font-size:26px}
+}
+@media (max-width:420px){.kpi .v{font-size:23px}.kpi .v.long{font-size:18px}.card{padding:16px}}
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="top-in">
+    <a class="brand" href="/"><span class="logo">⌂</span>小鍾社區報告</a>
+    <a class="top-cta" href="https://stanley-agent-booking.pages.dev/">預約諮詢</a>
+  </div>
+</header>
+
+<div class="shell">
+  <aside class="side">
+    <nav class="tabs" role="tablist">
+      <button role="tab" data-tab="overview"><i>▦</i><span>價格總覽</span></button>
+      <button role="tab" data-tab="market"><i>↗</i><span>行情與成交</span></button>
+      <button role="tab" data-tab="life"><i>⌖</i><span>環境與生活</span></button>
+      <button role="tab" data-tab="budget"><i>▤</i><span>購屋預算</span></button>
+      <button role="tab" data-tab="basic"><i>▥</i><span>建案基本資料</span></button>
+    </nav>
+    <div class="side-agent">
+      <div class="sa-k">報告整理</div>
+      <div class="sa-n">鍾思俞（小鍾）</div>
+      <div class="sa-s">中信房屋－中壢站前加盟店</div>
+      <a class="sa-p" href="tel:0989930638">0989-930638</a>
+    </div>
+  </aside>
+
+  <main class="main">
+    <section class="head">
+      <div class="crumb"><a href="/">社區列表</a> › <a href="../">大睦站前首席</a> › 價格報告</div>
+      <h1>大睦站前首席 <span class="pill">住宅大樓</span></h1>
+      <div class="loc" id="loc"></div>
+    </section>
+    <div id="panes"></div>
+  </main>
+</div>
+
+<footer class="foot">
+  <div class="foot-in">
+    <div class="f-agent">中信房屋－中壢站前加盟店（桃金企業社）· 承辦 鍾思俞（小鍾） 0989-930638</div>
+    <div class="f-fine">不動產經紀人：王萬木 (106)桃市經字第001621號</div>
+    <div class="f-fine">資料來源：內政部不動產成交案件實際資訊（實價登錄），資料截至 2026-08-18。
+    本頁為市場資訊整理，不構成正式估價、投資、法律或稅務意見；實際格局、坪數、價格以現場與正式契約為準。</div>
+  </div>
+</footer>
+
+<script>window.__R={"rep":{"name":"大睦站前首席","district":"中壢區","match":"自動比對","addrs":["青峰路二段（55、57、59、61、63、65、67、69號）"],"built":"2021-12","floors":14,"age":4.7,"n":19,"from":"2021-03-20","to":"2024-07-13","n1":0,"avg1":null,"avg":37.3,"min":31.9,"max":43.3,"type":"住宅大樓","cmpYears":[2016,2026],"est":{"lo":47,"mid":48.8,"hi":53.4},"rooms":[{"label":"2房","n":3,"ping":34,"pingLo":33.9,"pingHi":34,"avg":39.7,"min":36.1,"max":42.2,"est":53.8,"estLo":52.6,"estHi":54.7,"last":"2022-10-01"},{"label":"3房","n":16,"ping":42.9,"pingLo":42.1,"pingHi":42.9,"avg":36.9,"min":31.9,"max":43.3,"est":47.9,"estLo":46.7,"estHi":51.7,"last":"2024-07-13"}],"grow":49,"growFrom":"2021Q1","growTo":"2026Q1","nbAvg":43.7,"nbN":46,"nbrs":[{"addr":"松勇路97號等","same":false,"built":"2025","floors":18,"n":18,"n1":14,"avg1":38.8,"avg":38.4},{"addr":"南園二路381巷10號等","same":false,"built":"2024","floors":14,"n":101,"n1":10,"avg1":44.1,"avg":43.6},{"addr":"松義路5號等","same":false,"built":"2024","floors":22,"n":15,"n1":7,"avg1":37.4,"avg":37.9},{"addr":"永昌一路8號等","same":false,"built":"2025","floors":15,"n":11,"n1":7,"avg1":52.3,"avg":52.9},{"addr":"高鐵南路二段362之2號等","same":false,"built":"2019","floors":25,"n":10,"n1":4,"avg1":61.2,"avg":53.4},{"addr":"松勇路141號等","same":false,"built":"2025","floors":15,"n":5,"n1":4,"avg1":38.7,"avg":38.6}],"trend":{"qs":["2021Q1","2021Q2","2021Q3","2021Q4","2022Q1","2022Q2","2022Q3","2022Q4","2023Q1","2023Q2","2023Q3","2023Q4","2024Q1","2024Q2","2024Q3","2024Q4","2025Q1","2025Q2","2025Q3","2025Q4","2026Q1"],"dist":[29,28.7,31.9,32.9,32.6,33.9,38,36.9,35.5,38.2,40,41.6,44.3,47.8,46.1,47.3,46.1,47.3,43.4,44.7,46.2],"comm":[["2021H1",32.7,1],["2021H2",33.4,9],["2022H1",37.3,5],["2022H2",42.2,3],["2024H2",43.2,1]]},"tx":[{"d":"2024-07-13","f":10,"rm":"3房2廳2衛","ping":42.2,"park":1,"parkP":110,"total":1930,"unit":43.2},{"d":"2022-10-01","f":10,"rm":"2房2廳2衛","ping":33.9,"park":1,"parkP":140,"total":1572,"unit":42.2},{"d":"2022-08-28","f":10,"rm":"3房2廳2衛","ping":42.9,"park":1,"parkP":280,"total":2020,"unit":40.6},{"d":"2022-08-12","f":10,"rm":"3房2廳2衛","ping":42.3,"park":1,"parkP":280,"total":2110,"unit":43.3},{"d":"2022-06-18","f":14,"rm":"3房2廳2衛","ping":42.1,"park":1,"parkP":260,"total":1980,"unit":40.8},{"d":"2022-05-08","f":10,"rm":"3房2廳2衛","ping":42.9,"park":1,"parkP":240,"total":2028,"unit":41.7},{"d":"2022-04-10","f":3,"rm":"3房2廳2衛","ping":42.9,"park":1,"parkP":240,"total":1825,"unit":36.9},{"d":"2022-03-27","f":8,"rm":"3房2廳2衛","ping":42.9,"park":1,"parkP":240,"total":1830,"unit":37.1},{"d":"2022-03-24","f":9,"rm":"3房2廳2衛","ping":42.9,"park":1,"parkP":240,"total":1840,"unit":37.3},{"d":"2021-12-17","f":13,"rm":"2房2廳2衛","ping":34,"park":1,"parkP":220,"total":1610,"unit":40.9},{"d":"2021-11-23","f":11,"rm":"3房2廳2衛","ping":42.9,"park":1,"parkP":260,"total":1820,"unit":36.4},{"d":"2021-10-21","f":14,"rm":"3房2廳2衛","ping":42.9,"park":1,"parkP":240,"total":1675,"unit":33.4},{"d":"2021-10-10","f":8,"rm":"3房2廳2衛","ping":42.9,"park":1,"parkP":220,"total":1735,"unit":35.3},{"d":"2021-10-09","f":9,"rm":"3房2廳2衛","ping":42.3,"park":1,"parkP":230,"total":1580,"unit":31.9},{"d":"2021-08-28","f":9,"rm":"3房2廳2衛","ping":42.9,"park":1,"parkP":220,"total":1650,"unit":33.3},{"d":"2021-08-14","f":8,"rm":"2房2廳2衛","ping":34,"park":1,"parkP":240,"total":1470,"unit":36.1},{"d":"2021-08-07","f":13,"rm":"3房2廳2衛","ping":42.9,"park":1,"parkP":250,"total":1674,"unit":33.2},{"d":"2021-08-07","f":10,"rm":"3房2廳2衛","ping":42.9,"park":1,"parkP":250,"total":1665,"unit":33},{"d":"2021-03-20","f":11,"rm":"3房2廳2衛","ping":42.9,"park":1,"parkP":240,"total":1641,"unit":32.7}]},"g":{"address":"桃園市中壢區青峰路二段55號（社區門牌自55號至69號，單一棟14層）","highlight":"青埔A18站前生活圈，步行可達高鐵桃園站商圈，單一棟98戶低密度純住宅、1:1.5 全平面車位","basic":{"developer":"大睦建設機構－大築建設股份有限公司","contractor":"百潤營造股份有限公司","architect":"王朝雍建築師事務所","structure":"1棟，地上14層、地下3層，RC鋼筋混凝土","totalUnits":"98戶住家＋3戶店面","floorPlan":"2房約32坪、3房約40坪（含車位登記者權狀約50～60坪）","completion":"2021年12月完工，2022年6月起陸續交屋，屋齡約4.8年","coverageRatio":"約33%","buildingCoverage":"建蔽率約49.79%","orientation":"單一棟配置，各戶座向不同，以現場看屋為準","parking":"全平面式車位約150個，車位配比約1:1.5（無機械車位）","managementFee":"約80元／坪／月（實際費率以管委會現行公告為準）","managementCompany":""},"transport":["距高鐵桃園站約700公尺，機捷A18桃園機場捷運站車程約2～5分鐘","青峰路二段與青昇二街口，鄰近國道1號、國道2號交流道","桃園機場車程約20分鐘","步行約1分鐘可達兒二公園"],"amenities":{"commercial":["華泰名品城車程約5分鐘","IKEA桃園青埔店、Xpark水族館車程約5～8分鐘","新光影城／置地廣場（高鐵站前商圈）車程約5分鐘"],"supermarket":["查無社區周邊超市名稱，需現場確認（青埔重劃區內全聯、超市多集中在領航路一帶）"],"traditionalMarket":["查無鄰近傳統市場，青埔重劃區普遍缺乏傳統市場，屬本區共同缺點"],"medical":["青埔重劃區內有數家診所，車程約5分鐘","聯新國際醫院（區域級大型醫院）車程約15～20分鐘","壢新／敏盛等大型醫院均需開車，社區周邊無大型醫院"],"leisure":["兒二公園步行約1分鐘","青塘園、橫山書法藝術公園車程約5～8分鐘","高鐵青埔園道綠帶"]},"amenitiesFlat":["華泰名品城車程約5分鐘，IKEA桃園青埔店、Xpark水族館車程約5～8分鐘","新光影城、置地廣場等高鐵站前商圈車程約5分鐘","兒二公園步行約1分鐘，青塘園、橫山書法藝術公園車程約5～8分鐘","青埔重劃區內診所車程約5分鐘，聯新國際醫院車程約15～20分鐘","日常採買以青埔重劃區內超市與量販為主，建議以車代步"],"schools":[{"level":"國小","name":"青埔國小","distance":"車程約5分鐘","note":"學區以區公所公告為準"},{"level":"國中","name":"青埔國中","distance":"車程約9分鐘","note":""},{"level":"高中","name":"查無明確劃分，桃園區／中壢區各高中皆需通車","distance":"","note":""}],"sun":["單一棟14層建築，同層各戶座向不同，實際採光以現場看屋為準","面西、西南向戶型午後日照較強，建議安排下午時段看屋感受採光","低樓層前方視野會受青埔重劃區後續開發影響，可於現場一併確認"],"facilities":["接待大廳、視聽室、健身房、圖書交誼廳、多功能休憩區、多功能娛樂室、鋼琴室","實際開放項目與使用規約以社區管委會現行公告為準"],"pros":["距高鐵桃園站約700公尺、機捷A18站車程2～5分鐘，雙鐵生活圈稀有步行可達位置","單一棟98戶純住宅，戶數少、住戶單純，管理相對容易","車位全平面式、配比約1:1.5，無機械車位的使用不便","步行約1分鐘可達兒二公園，華泰名品城、IKEA、Xpark車程5～8分鐘","屋齡約4.8年、公設比約33%，屬準新屋且已完工交屋，可現況看屋"],"updated":"2026-09-04"},"asof":"2026-08-18","qFull":"2026Q1","loan":"https://qingan-loan-calculator.pages.dev/"};</script>
+<script>
+(function(){
+var D=window.__R, R=D.rep, G=D.g;
+function e(s){return s==null?"":String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;")}
+function f1(x){return x==null?"—":Number(x).toFixed(1)}
+function n0(x){return x==null?"—":Math.round(x).toLocaleString("zh-TW")}
+function ymd(s){return s?s.replace(/-/g,"/"):""}
+var roomIdx=0; (function(){var best=0;R.rooms.forEach(function(r,i){if(r.n>R.rooms[best].n)best=i});roomIdx=best})();
+
+document.getElementById("loc").textContent=["桃園市"+R.district, G.address].filter(Boolean).join(" · ");
+
+var cmpLabel=R.district+"・"+R.type+"・"+R.cmpYears[0]+"–"+R.cmpYears[1]+" 年完工";
+// 同路段不足時補的是「同區屋齡相近」的大樓，可能在區的另一頭，不能叫「鄰近」
+var nbNear=R.nbrs.length>0&&R.nbrs.every(function(x){return x.same});
+var nbTitle=nbNear?"同路段社區":"同區屋齡相近大樓";
+
+function card(inner,cls){return '<div class="card '+(cls||"")+'">'+inner+'</div>'}
+function head(k,t,lead){return (k?'<div class="kick">'+k+'</div>':'')+'<h2>'+t+'</h2>'+(lead?'<p class="lead">'+lead+'</p>':'')}
+function ul(a){return a&&a.length?'<ul class="l">'+a.map(function(x){return "<li>"+e(x)+"</li>"}).join("")+'</ul>':''}
+function info(rows){rows=rows.filter(function(r){return r[1]});return rows.length?'<table class="info">'+rows.map(function(r){return "<tr><th>"+e(r[0])+"</th><td>"+e(r[1])+"</td></tr>"}).join("")+"</table>":""}
+function chips(id){return '<div class="chips" id="'+id+'">'+R.rooms.map(function(r,i){return '<button class="chip" data-i="'+i+'" aria-pressed="'+(i===roomIdx)+'"><b>'+r.label+'</b><small>'+f1(r.ping)+' 坪 · '+r.n+' 筆</small></button>'}).join("")+'</div>'}
+
+// ===== 1 價格總覽 =====
+function overview(){
+  var rm=R.rooms[roomIdx];
+  var topL = R.nbAvg!=null ? [nbTitle+'一年均價', f1(R.nbAvg)+' 萬／坪', '近一年 '+R.nbN+' 筆'] : ['本社區歷史成交均價', f1(R.avg)+' 萬／坪', R.n+' 筆'];
+  var tLo=Math.round(rm.pingLo*rm.avg), tHi=Math.round(rm.pingHi*rm.avg);
+  var recent=R.n1>0?'近一年本社區成交 '+R.n1+' 筆，均價 '+f1(R.avg1)+' 萬／坪。':'最新成交為 '+ymd(R.to)+'，近一年本社區無成交資料。';
+  var dark=head('','一眼看懂價格區間')+
+    '<div class="toprow"><div><div class="t">'+topL[0]+'</div><div class="v">'+topL[1]+'</div><div class="t">'+topL[2]+'</div></div>'+
+    '<div style="text-align:right"><div class="t">區域歷史漲幅</div><div class="v">'+(R.grow==null?'樣本不足':(R.grow>0?'+':'')+f1(R.grow)+'%')+'</div><div class="t">'+R.growFrom+'–'+R.growTo+'</div></div></div>'+
+    '<div class="muted" style="margin-bottom:10px;font-size:13.5px">'+rm.label+' · '+f1(rm.ping)+' 坪</div>'+
+    '<div class="kpis">'+
+      '<div class="kpi gold"><div class="t">同格局歷史成交均價</div><div class="v">'+f1(rm.avg)+'<small>萬／坪</small></div><div class="n">'+rm.label+'樣本 '+rm.n+' 筆</div></div>'+
+      '<div class="kpi"><div class="t">同格局最高單價</div><div class="v">'+f1(rm.max)+'<small>萬／坪</small></div><div class="n">目前樣本最高值</div></div>'+
+      '<div class="kpi"><div class="t">歷史平均總價（不含車位）</div><div class="v'+(tLo===tHi?'':' long')+'">'+(tLo===tHi?n0(tLo):n0(tLo)+'–'+n0(tHi))+'<small>萬</small></div><div class="n">'+f1(rm.pingLo)+(rm.pingLo===rm.pingHi?'':'–'+f1(rm.pingHi))+' 坪 × 歷史平均單價</div></div>'+
+      '<div class="kpi"><div class="t">同格局最低單價</div><div class="v">'+f1(rm.min)+'<small>萬／坪</small></div><div class="n">目前樣本最低值</div></div>'+
+    '</div>'+
+    '<div class="note">樣本期間 '+ymd(R.from)+'–'+ymd(R.to)+' · 資料截至 '+ymd(D.asof)+' · '+recent+'</div>';
+
+  var est=head('ESTIMATE','今日行情區間（'+rm.label+'）','把本社區每筆歷史成交依區域季指數換算到今天的價格水位，取中間六成（20–80 百分位）。')+
+    rangeBar(rm.estLo,rm.est,rm.estHi)+
+    '<div class="lightnote">換算成總價（'+f1(rm.ping)+' 坪、不含車位）約 <b>'+n0(rm.estLo*rm.ping)+'–'+n0(rm.estHi*rm.ping)+' 萬</b>。同一棟樓的成交單價本來就會因樓層、座向、屋況相差約 ±10%，實際戶別請個別評估。</div>';
+
+  var summ=head('SUMMARY','報告摘要')+
+    '<p style="margin:0 0 10px">'+e(R.name)+'位於桃園市'+e(R.district)+'，'+e(R.type)+'，'+R.built.slice(0,4)+' 年完工、地上 '+R.floors+' 層，屋齡約 '+f1(R.age)+' 年。'+
+    '實價登錄共 '+R.n+' 筆成交（扣除車位後的純房屋單價 '+f1(R.min)+'–'+f1(R.max)+' 萬／坪），格局以'+R.rooms.slice().sort(function(a,b){return b.n-a.n}).slice(0,2).map(function(r){return r.label}).join("、")+'為主。</p>'+
+    (G.highlight?'<p class="muted" style="margin:0">'+e(G.highlight)+'</p>':'');
+
+  var pick=head('STEP 1','選擇你的格局','切換格局後，價格總覽與購屋預算會一起更新。')+chips("chips1")+
+    '<p class="muted" style="font-size:12.5px;margin:12px 0 0">坪數為扣除車位後的建物面積中位數；「4房以上」合併計算。</p>';
+
+  var qa=head('','這份報告回答哪些購屋問題？')+'<div class="qa">'+
+    [['market','成交價有沒有依據？','逐筆成交紀錄與區域走勢'],['budget','要準備多少錢？','頭期款與貸款金額試算'],['life','生活機能如何？','交通、學區、商圈、採光'],['basic','建案規格是什麼？','建商、公設比、車位、管理費']]
+    .map(function(q){return '<a data-go="'+q[0]+'"><b>'+q[1]+'</b><span>'+q[2]+'</span></a>'}).join("")+'</div>';
+
+  return '<div class="grid2"><div>'+card(dark,"dark")+card(summ)+'</div><div>'+card(pick)+card(est)+'</div></div>'+card(qa);
+}
+function rangeBar(lo,mid,hi){
+  var span=Math.max(hi-lo,.1), pad=span*.6, a=lo-pad, b=hi+pad, pos=function(v){return ((v-a)/(b-a)*100).toFixed(1)+"%"};
+  return '<div class="range"><div class="big">'+f1(lo)+' – '+f1(hi)+' <small>萬／坪</small></div>'+
+    '<div class="bar" style="margin-top:14px;background:linear-gradient(90deg,#e8edf5 0,#e8edf5 '+pos(lo)+',var(--navy3) '+pos(lo)+',var(--navy3) '+pos(hi)+',#e8edf5 '+pos(hi)+')"><div class="mk" style="left:'+pos(mid)+'"></div></div>'+
+    '<div class="lab"><span>低 '+f1(lo)+'</span><span>中位 <b>'+f1(mid)+'</b></span><span>高 '+f1(hi)+'</span></div></div>';
+}
+
+// ===== 2 行情與成交 =====
+var txRoom="all";
+function market(){
+  var ch=head('TREND','單價走勢','本社區每半年成交中位單價，對照同區、同類型、屋齡相近大樓（'+e(cmpLabel)+'）的每季中位單價。')+
+    '<div class="legend"><span style="--c:var(--gold)">'+e(R.name)+'（半年）</span><span style="--c:#8fa3c7">比較基準（每季）</span></div>'+chart()+
+    '<p class="muted" style="font-size:12.5px;margin:6px 0 0">圓點越大代表該半年成交筆數越多；只有 1–2 筆的半年，單價容易受樓層與格局影響。走勢畫到最後一個資料完整的季（'+D.qFull+'）。</p>';
+
+  var byRoom=head('BY LAYOUT','各格局成交整理')+'<div class="scroll"><table class="t"><thead><tr><th>格局</th><th class="r">筆數</th><th class="r">坪數</th><th class="r">均價</th><th class="r">最低</th><th class="r">最高</th><th class="r">今日行情</th><th>最近成交</th></tr></thead><tbody>'+
+    R.rooms.map(function(r){return '<tr><td><b>'+r.label+'</b></td><td class="r">'+r.n+'</td><td class="r">'+f1(r.pingLo)+(r.pingLo===r.pingHi?'':'–'+f1(r.pingHi))+'</td><td class="r">'+f1(r.avg)+'</td><td class="r">'+f1(r.min)+'</td><td class="r">'+f1(r.max)+'</td><td class="r">'+f1(r.estLo)+'–'+f1(r.estHi)+'</td><td>'+ymd(r.last)+'</td></tr>'}).join("")+
+    '</tbody></table></div><p class="muted" style="font-size:12.5px;margin:8px 0 0">單位：萬／坪（已扣除車位價與車位面積）。</p>';
+
+  var nb=R.nbrs.length?head('COMPARE',nbTitle+'比較',nbNear?'同一條路上的其他大樓（依門牌列示）。':'同路段的其他大樓優先，不足時補上'+e(cmpLabel)+'、近一年有成交的大樓（依門牌列示，不一定在附近，僅供同類產品價位參考）。')+
+    '<div class="scroll"><table class="t"><thead><tr><th>社區門牌</th><th class="r">完工</th><th class="r">樓高</th><th class="r">近一年</th><th class="r">一年均價</th><th class="r">歷史均價</th></tr></thead><tbody>'+
+    '<tr style="background:#fdf8ea"><td><b>'+e(R.name)+'</b>（本案）</td><td class="r">'+R.built.slice(0,4)+'</td><td class="r">'+R.floors+'F</td><td class="r">'+R.n1+' 筆</td><td class="r">'+f1(R.avg1)+'</td><td class="r">'+f1(R.avg)+'</td></tr>'+
+    R.nbrs.map(function(x){return '<tr><td>'+e(x.addr)+(x.same?'<span class="tag-same">同路段</span>':'')+'</td><td class="r">'+x.built+'</td><td class="r">'+x.floors+'F</td><td class="r">'+x.n1+' 筆</td><td class="r">'+f1(x.avg1)+'</td><td class="r">'+f1(x.avg)+'</td></tr>'}).join("")+
+    '</tbody></table></div>':"";
+
+  var opts='<option value="all">全部格局</option>'+R.rooms.map(function(r){return '<option value="'+r.label+'">'+r.label+'</option>'}).join("");
+  var tx=head('RECORDS','成交明細','共 '+R.n+' 筆，依成交日期由新到舊。')+
+    '<label class="muted" style="font-size:13px">篩選 <select id="txf" style="font:inherit;padding:4px 8px;border-radius:8px;border:1px solid var(--line)">'+opts+'</select></label>'+
+    '<div class="scroll" style="margin-top:8px"><table class="t"><thead><tr><th>成交日</th><th class="r">樓層</th><th>格局</th><th class="r">坪數</th><th class="r">總價(萬)</th><th class="r">車位(萬)</th><th class="r">單價</th></tr></thead><tbody id="txb"></tbody></table></div>'+
+    '<div id="txmore"></div>';
+
+  return card(ch)+card(byRoom)+(nb?card(nb):"")+card(tx);
+}
+var txShown=30;
+function drawTx(){
+  var list=R.tx.filter(function(t){if(txRoom==="all")return true;var k=parseInt(t.rm,10);var lab=k===0?"開放式":k>=4?"4房以上":k+"房";return lab===txRoom});
+  document.getElementById("txb").innerHTML=list.slice(0,txShown).map(function(t){return '<tr><td>'+ymd(t.d)+'</td><td class="r">'+(t.f==null?"—":t.f+"F")+'</td><td>'+t.rm+'</td><td class="r">'+f1(t.ping)+'</td><td class="r">'+n0(t.total)+'</td><td class="r">'+(t.parkP?n0(t.parkP):(t.park?"含":"—"))+'</td><td class="r"><b>'+f1(t.unit)+'</b></td></tr>'}).join("");
+  document.getElementById("txmore").innerHTML=list.length>txShown?'<p style="text-align:center;margin:12px 0 0"><button class="chip" id="txm">顯示更多（還有 '+(list.length-txShown)+' 筆）</button></p>':'';
+  var b=document.getElementById("txm"); if(b)b.onclick=function(){txShown+=50;drawTx()};
+}
+function chart(){
+  var qs=D.rep.trend.qs, dist=D.rep.trend.dist, W=720,H=280,L=44,Rr=12,T=14,B=34;
+  var pts=R.trend.comm.map(function(c){var y=+c[0].slice(0,4),h=c[0].slice(4)==="H1"?1:2;var qi=qs.indexOf(y+"Q"+(h*2));var x=qi<0?(qs.indexOf(y+"Q"+(h*2-1))+.5):qi-.5;return {x:x,v:c[1],n:c[2],k:c[0]}}).filter(function(p){return p.x>=0});
+  var vals=dist.filter(function(v){return v!=null}).concat(pts.map(function(p){return p.v}));
+  var lo=Math.floor(Math.min.apply(null,vals)/5)*5, hi=Math.ceil(Math.max.apply(null,vals)/5)*5; if(hi===lo)hi+=5;
+  var X=function(i){return L+(W-L-Rr)*i/(qs.length-1)}, Y=function(v){return T+(H-T-B)*(1-(v-lo)/(hi-lo))};
+  var s='<svg class="chart" viewBox="0 0 '+W+' '+H+'" role="img" aria-label="單價走勢圖">';
+  for(var g=lo;g<=hi;g+=(hi-lo>20?10:5)){s+='<line x1="'+L+'" x2="'+(W-Rr)+'" y1="'+Y(g)+'" y2="'+Y(g)+'" stroke="#ece6d9"/><text x="'+(L-8)+'" y="'+(Y(g)+4)+'" text-anchor="end" font-size="11" fill="#8a8f98">'+g+'</text>'}
+  qs.forEach(function(q,i){if(q.slice(4)==="Q1")s+='<text x="'+X(i)+'" y="'+(H-12)+'" text-anchor="middle" font-size="11" fill="#8a8f98">'+q.slice(0,4)+'</text>'});
+  var d="";dist.forEach(function(v,i){if(v==null)return;d+=(d?"L":"M")+X(i).toFixed(1)+","+Y(v).toFixed(1)});
+  s+='<path d="'+d+'" fill="none" stroke="#8fa3c7" stroke-width="2"/>';
+  if(pts.length>1){var p2="";pts.forEach(function(p){p2+=(p2?"L":"M")+X(p.x).toFixed(1)+","+Y(p.v).toFixed(1)});s+='<path d="'+p2+'" fill="none" stroke="#c9a84c" stroke-width="2.5"/>'}
+  pts.forEach(function(p){var r=Math.min(9,3.5+Math.sqrt(p.n)*1.2);s+='<circle cx="'+X(p.x).toFixed(1)+'" cy="'+Y(p.v).toFixed(1)+'" r="'+r.toFixed(1)+'" fill="#c9a84c" stroke="#fff" stroke-width="1.5"><title>'+p.k+'：'+f1(p.v)+' 萬／坪（'+p.n+' 筆）</title></circle>'});
+  return s+'</svg>';
+}
+
+// ===== 3 環境與生活 =====
+function life(){
+  var a=G.amenities||{}, groups=G.amenitiesFlat?[["生活機能",G.amenitiesFlat]]:[["商圈購物",a.commercial],["超市量販",a.supermarket],["傳統市場",a.traditionalMarket],["醫療",a.medical],["休閒公園",a.leisure]];
+  var am=groups.filter(function(x){return x[1]&&x[1].length}).map(function(x){return '<div class="sub-h">'+x[0]+'</div>'+ul(x[1])}).join("");
+  var sc=G.schools&&G.schools.length?'<div class="scroll"><table class="t"><thead><tr><th>學制</th><th>學校</th><th>距離</th></tr></thead><tbody>'+G.schools.map(function(s){return '<tr><td>'+e(s.level)+'</td><td>'+e(s.name)+(s.note?'<div class="muted" style="font-size:12.5px">'+e(s.note)+'</div>':'')+'</td><td>'+e(s.distance)+'</td></tr>'}).join("")+'</tbody></table></div><p class="muted" style="font-size:12.5px;margin:8px 0 0">實際學區以戶籍地址向區公所、學校確認為準。</p>':'';
+  var out="";
+  if(G.transport.length)out+=card(head('LOCATION','交通與位置')+ul(G.transport));
+  var right="";
+  if(am)right+=card(head('LIFESTYLE','生活機能')+am);
+  var left="";
+  if(sc)left+=card(head('SCHOOL','鄰近學區')+sc);
+  if(G.sun.length)left+=card(head('DAYLIGHT','採光與座向')+ul(G.sun));
+  if(!out&&!left&&!right)return card('<p class="muted">此社區尚未整理生活機能資料。</p>');
+  return out+'<div class="grid2"><div>'+left+'</div><div>'+right+'</div></div>';
+}
+
+// ===== 4 購屋預算 =====
+function budget(){
+  var rm=R.rooms[roomIdx], mid=Math.round(rm.est*rm.ping), lo=Math.round(rm.estLo*rm.ping), hi=Math.round(rm.estHi*rm.ping);
+  var parks=R.tx.filter(function(t){return t.parkP}).map(function(t){return t.parkP}).sort(function(a,b){return a-b});
+  var pk=parks.length?parks[Math.floor(parks.length/2)]:null;
+  var withPk=mid+(pk||0);
+  var rows=[[2,8],[3,7]].map(function(r){var down=withPk*r[0]/10;return '<tr><td>頭期 '+r[0]+' 成／貸款 '+r[1]+' 成</td><td class="r"><b>'+n0(down)+'</b></td><td class="r">'+n0(withPk-down)+'</td></tr>'}).join("");
+  var tot=head('STEP 2','預估購屋總價（'+rm.label+'，'+f1(rm.ping)+' 坪）','以今日行情區間 × 本社區該格局坪數中位數估算。')+
+    '<div class="big">'+n0(lo)+' – '+n0(hi)+' <small>萬（不含車位）</small></div>'+
+    '<div class="lightnote">中位估算約 <b>'+n0(mid)+' 萬</b>'+(pk?'；本社區車位成交中位價約 <b>'+n0(pk)+' 萬</b>（'+parks.length+' 筆），含車位合計約 <b>'+n0(withPk)+' 萬</b>。':'；本社區實登資料中沒有拆分車位價格的成交。')+'</div>';
+  var cash=head('STEP 3','自備款與貸款金額','以含車位的中位估算 '+n0(withPk)+' 萬計算；另需預留約總價 3–5% 的稅費、代書、仲介服務費與裝修預算。')+
+    '<div class="scroll"><table class="t"><thead><tr><th>成數</th><th class="r">頭期款（萬）</th><th class="r">貸款（萬）</th></tr></thead><tbody>'+rows+'</tbody></table></div>'+
+    '<p style="margin:16px 0 0"><a class="btn gold" target="_blank" rel="noopener" href="'+D.loan+'?price='+withPk+'">用青安試算月付金 →</a></p>'+
+    '<p class="muted" style="font-size:12.5px;margin:10px 0 0">月付金、利率、新青安額度上限與寬限期規則，統一在青安試算頁計算（會自動帶入總價）。</p>';
+  var pick=head('STEP 1','選擇格局')+chips("chips4");
+  return '<div class="grid2"><div>'+card(pick)+card(tot)+'</div><div>'+card(cash)+card(head('','想談實際物件？','實際開價、屋況、可議空間，每一戶都不一樣。')+'<a class="btn" href="'+"https://stanley-agent-booking.pages.dev/"+'">預約小鍾諮詢</a>')+'</div></div>';
+}
+
+// ===== 5 建案基本資料 =====
+function basic(){
+  var b=G.basic||{};
+  var t=info([["投資興建",b.developer],["營造公司",b.contractor],["建築設計",b.architect],["建築規劃",b.structure],["總戶數",b.totalUnits],["格局規劃",b.floorPlan],["完工狀況",b.completion],["公設比",b.coverageRatio],["建蔽率",b.buildingCoverage],["座向",b.orientation],["車位規劃",b.parking],["管理費",b.managementFee],["物業管理",b.managementCompany]]);
+  var src=info([["實登門牌",R.addrs.join("；")],["建物完工",R.built.replace("-"," 年 ")+" 月"],["總樓層",R.floors+" 層"],["成交樣本",R.n+" 筆（"+ymd(R.from)+"–"+ymd(R.to)+"）"],["資料截至",ymd(D.asof)]]);
+  var out='<div class="grid2"><div>'+card(head('BASIC INFO','建案基本資料')+(t||'<p class="muted">尚未整理。</p>'))+'</div><div>'+
+    (G.pros.length?card(head('HIGHLIGHTS','推薦重點')+ul(G.pros.slice(0,5))):'')+
+    (G.facilities.length?card(head('FACILITIES','公共設施')+ul(G.facilities)):'')+
+    card(head('DATA','成交資料怎麼對到這個社區','實價登錄沒有社區名稱欄位，本報告以「同路段＋建物完工年月＋總樓層」辨識同一社區的各戶門牌。')+src)+'</div></div>';
+  return out;
+}
+
+// ===== 分頁 =====
+var PANES={overview:overview,market:market,life:life,budget:budget,basic:basic};
+var cur="overview";
+function render(){
+  document.getElementById("panes").innerHTML='<div class="pane on">'+PANES[cur]()+'</div>';
+  document.querySelectorAll(".tabs button").forEach(function(b){b.setAttribute("aria-selected",b.dataset.tab===cur)});
+  document.querySelectorAll(".chips .chip").forEach(function(c){c.onclick=function(){roomIdx=+c.dataset.i;render()}});
+  document.querySelectorAll("[data-go]").forEach(function(a){a.onclick=function(){go(a.dataset.go)}});
+  if(cur==="market"){txShown=30;var s=document.getElementById("txf");s.value=txRoom;s.onchange=function(){txRoom=s.value;txShown=30;drawTx()};drawTx()}
+}
+function go(t,noScroll){if(!PANES[t])t="overview";cur=t;try{history.replaceState(null,"","#"+t)}catch(_){}render();if(!noScroll)window.scrollTo({top:0})}
+document.querySelectorAll(".tabs button").forEach(function(b){b.onclick=function(){go(b.dataset.tab)}});
+go((location.hash||"").slice(1),true);
+})();
+</script>
+</body>
+</html>
