@@ -69,9 +69,13 @@
   footer .agent { color:var(--navy); font-weight:700; }
   .radio { display:flex; gap:12px; font-size:14px; }
   .hidden { display:none !important; }
+  /* ?embed=1：嵌在 CRM 分頁裡時，拿掉頁首、回列表、頁尾 */
+  html.embed .hero, html.embed .back, html.embed footer { display:none; }
+  html.embed .wrap { padding-top:4px; }
 </style>
 </head>
 <body>
+<script>if (/[?&]embed=1/.test(location.search)) document.documentElement.classList.add("embed");</script>
 <div class="hero">
   <div class="tag">FENG SHUI TOOL</div>
   <h1>看屋風水小工具</h1>
