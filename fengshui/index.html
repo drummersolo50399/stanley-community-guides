@@ -90,7 +90,7 @@
           <button class="btn on" data-mode="query" type="button">👆 點選查方位</button>
           <button class="btn" data-mode="center" type="button">☯ 移中宮</button>
           <button class="btn" data-mode="north2" type="button">🧭 兩點定北</button>
-          <button class="btn" data-mode="door" type="button">🚪 點大門</button>
+          <button class="btn" data-mode="door" type="button">📍 點向（陽台／大門）</button>
         </div>
       </div>
       <canvas id="cv" width="800" height="600"></canvas>
@@ -144,9 +144,16 @@
 
       <div class="panel">
         <h2><span class="num">4</span>房屋坐向（宅卦）</h2>
-        <p class="hint" style="margin-top:0">用大門（或主要採光面）朝的方向當「向」，背後就是「坐」。可以按「🚪 點大門」直接在圖上點大門位置，或手動選。</p>
+        <p class="hint" style="margin-top:0"><b>大樓、公寓看前陽台</b>（客廳大面採光那一面），<b>透天看大門</b>。「向」朝的方向決定宅卦，背後就是「坐」。可以按「📍 點向」直接在圖上點陽台或大門，或手動選。</p>
         <div class="row" style="margin-top:8px">
-          <span style="font-size:14px">大門朝</span>
+          <span style="font-size:14px">定向依據</span>
+          <select id="basis">
+            <option value="balcony">前陽台（大樓／公寓）</option>
+            <option value="door">大門（透天／別墅）</option>
+          </select>
+        </div>
+        <div class="row">
+          <span style="font-size:14px" id="facingLabel">前陽台朝</span>
           <select id="facing"></select>
         </div>
         <div class="house" style="margin-top:12px">
@@ -248,7 +255,8 @@
     mode: 'query',
     sel: null,               // 選取的方位 index
     n2: null,                // 兩點定北第一點
-    door: null,              // 大門點（圖片比例座標）
+    door: null,              // 定向點（陽台或大門，圖片比例座標）
+    basis: 'balcony',        // 定向依據：balcony 前陽台 / door 大門
   };
 
   const cv = document.getElementById('cv');
@@ -271,6 +279,7 @@
     const t = $('toast'); t.textContent = msg; t.classList.add('show');
     clearTimeout(toast._t); toast._t = setTimeout(() => t.classList.remove('show'), ms);
   }
+  const basisName = () => S.basis === 'door' ? '大門' : '前陽台';
   const zhai = () => S.facing == null ? null : GUA[(S.facing + 4) % 8].g;
 
   // ===== 繪圖（螢幕與輸出共用） =====
@@ -340,8 +349,12 @@
       c.strokeStyle = '#c9a84c'; c.lineWidth = 2.5 * k; c.setLineDash([4 * k, 4 * k]);
       c.beginPath(); c.moveTo(cxy.x, cxy.y); c.lineTo(d.x, d.y); c.stroke(); c.setLineDash([]);
       c.fillStyle = '#c9a84c'; c.beginPath(); c.arc(d.x, d.y, 7 * k, 0, Math.PI * 2); c.fill();
-      c.font = `${16 * k}px sans-serif`; c.textAlign = 'center'; c.textBaseline = 'bottom';
-      c.fillText('🚪', d.x, d.y - 8 * k);
+      const tag = '向・' + basisName();
+      c.font = `700 ${12 * k}px -apple-system,"PingFang TC","Microsoft JhengHei",sans-serif`;
+      const tw = c.measureText(tag).width + 12 * k;
+      c.fillStyle = '#c9a84c'; roundRect(c, d.x - tw / 2, d.y - 32 * k, tw, 20 * k, 5 * k); c.fill();
+      c.fillStyle = '#fff'; c.textAlign = 'center'; c.textBaseline = 'middle';
+      c.fillText(tag, d.x, d.y - 22 * k);
     }
 
     // 中宮太極 + 指北針
@@ -407,7 +420,7 @@
     } else {
       const zi = IDX[z], f = GUA[S.facing];
       $('houseName').textContent = `${z}宅（坐${GUA[zi].dir}朝${f.dir}）`;
-      $('houseSub').textContent = `${GUA[zi].grp}四宅・宅卦屬${GUA[zi].el}・北方 ${S.north}°`;
+      $('houseSub').textContent = `${GUA[zi].grp}四宅・宅卦屬${GUA[zi].el}・以${basisName()}定向・北方 ${S.north}°`;
     }
     $('grid8').innerHTML = GUA.map((x, i) => {
       const s = z ? starOf(z, x.g) : null, st = s ? STAR[s] : null;
@@ -421,7 +434,7 @@
     const d = $('detail');
     if (S.sel == null) { d.innerHTML = '<span class="fine">點圖上任一位置，或點上方八格，看該方位適合做什麼。</span>'; return; }
     const x = GUA[S.sel], z = zhai();
-    if (!z) { d.innerHTML = `<h3>${x.sym} ${x.g}・${x.dir}（${x.el}）</h3><span class="fine">設定大門朝向後，才能判斷這一方的吉凶。</span>`; return; }
+    if (!z) { d.innerHTML = `<h3>${x.sym} ${x.g}・${x.dir}（${x.el}）</h3><span class="fine">設定房屋坐向後，才能判斷這一方的吉凶。</span>`; return; }
     const s = starOf(z, x.g), st = STAR[s];
     d.innerHTML = `<h3>${x.sym} ${x.g}・${x.dir}　${s}<span class="badge ${st.ji ? 'ji' : 'xiong'}">${st.lv}</span></h3>
       <dl><dt>星曜</dt><dd>${st.star}</dd><dt>適合</dt><dd>${st.use}</dd><dt>避免</dt><dd>${st.avoid}</dd></dl>
@@ -455,12 +468,12 @@
     const c = toCanvas(S.cx, S.cy), d = toCanvas(S.door.u, S.door.v);
     const i = sectorAt(d.x, d.y);
     S.facing = i; $('facing').value = i;
-    if (announce) toast(`大門朝${GUA[i].dir} → 坐${GUA[(i + 4) % 8].dir}朝${GUA[i].dir}，${GUA[(i + 4) % 8].g}宅`);
+    if (announce) toast(`${basisName()}朝${GUA[i].dir} → 坐${GUA[(i + 4) % 8].dir}朝${GUA[i].dir}，${GUA[(i + 4) % 8].g}宅`);
   }
   function setMode(m) {
     S.mode = m; S.n2 = null;
     document.querySelectorAll('[data-mode]').forEach(b => b.classList.toggle('on', b.dataset.mode === m));
-    const msg = { query: '點圖上任一位置查吉凶', center: '拖曳太極點到房屋中心', north2: '先點指北針「尾端」', door: '點大門位置' }[m];
+    const msg = { query: '點圖上任一位置查吉凶', center: '拖曳太極點到房屋中心', north2: '先點指北針「尾端」', door: S.basis === 'door' ? '點大門位置' : '點前陽台（客廳落地窗）位置' }[m];
     if (S.img) toast(msg);
     render();
   }
@@ -471,6 +484,7 @@
   $('facing').innerHTML = '<option value="">請選擇</option>' + GUA.map((x, i) => `<option value="${i}">${x.dir}（坐${GUA[(i + 4) % 8].dir}・${GUA[(i + 4) % 8].g}宅）</option>`).join('');
   $('facing').onchange = e => { S.facing = e.target.value === '' ? null : +e.target.value; S.door = null; render(); renderPanel(); };
   $('grid8').onclick = e => { const g = e.target.closest('.g'); if (!g) return; S.sel = +g.dataset.i; render(); renderPanel(); };
+  $('basis').onchange = e => { S.basis = e.target.value; $('facingLabel').textContent = basisName() + '朝'; render(); renderPanel(); };
   $('birth').onchange = renderMing;
   document.querySelectorAll('input[name=sex]').forEach(r => r.onchange = renderMing);
   $('btnCenterReset').onclick = () => { S.cx = S.cy = 0.5; if (S.door) setFacingFromDoor(false); render(); renderPanel(); };
@@ -506,7 +520,7 @@
   }
   function toastSector(i) {
     const z = zhai(), x = GUA[i];
-    if (!z) return toast(`${x.g}・${x.dir}　（設定大門朝向後可看吉凶）`);
+    if (!z) return toast(`${x.g}・${x.dir}　（設定房屋坐向後可看吉凶）`);
     const s = starOf(z, x.g), st = STAR[s];
     toast(`${x.g}・${x.dir}　${s}（${st.lv}）　宜：${st.use}`, 3600);
   }
@@ -517,7 +531,7 @@
     im.onload = () => {
       S.img = im; S.name = name || '格局圖'; S.cx = S.cy = 0.5; S.sel = null; S.door = null; S.n2 = null;
       $('empty').classList.add('hidden'); $('stageTitle').textContent = S.name;
-      render(); renderPanel(); toast('拖曳太極點到房屋中心，再設定北方與大門', 3600);
+      render(); renderPanel(); toast('拖曳太極點到房屋中心，再設定北方與坐向', 3600);
     };
     im.onerror = () => toast('這張圖讀不出來，請換成 JPG 或 PNG');
     im.src = src;
@@ -579,7 +593,9 @@
     if (z) {
       g.textAlign = 'right'; g.fillStyle = '#c9a84c';
       g.font = `700 ${17 * k}px -apple-system,"PingFang TC","Microsoft JhengHei",sans-serif`;
-      g.fillText(`${z}宅・坐${GUA[IDX[z]].dir}朝${GUA[S.facing].dir}（${GUA[IDX[z]].grp}四宅）`, W - 18 * k, head / 2);
+      g.fillText(`${z}宅・坐${GUA[IDX[z]].dir}朝${GUA[S.facing].dir}（${GUA[IDX[z]].grp}四宅）`, W - 18 * k, head / 2 - 9 * k);
+      g.fillStyle = '#c3cde3'; g.font = `${12 * k}px -apple-system,"PingFang TC","Microsoft JhengHei",sans-serif`;
+      g.fillText(`以${basisName()}朝向定宅卦`, W - 18 * k, head / 2 + 13 * k);
     }
     const R = { x: (W - iw) / 2, y: head, w: iw, h: ih };
     g.fillStyle = '#fff'; g.fillRect(R.x, R.y, R.w, R.h);
